@@ -6,7 +6,7 @@ import routes from "./routes/routes.js";
 console.log(`자 몽고db에 접속해 볼까나?`);
 mongoose
     .connect(
-        'mongodb+srv://shindalsoo:sds9050%40%23!@zioyou.zkjwmfy.mongodb.net/myFirstDatabase?authSource=admin'
+        process.env.MONGODB_ATLAS_CONNECTION_STRING
     )
     .then(()=>{
         console.log("몽고DB 아틀라스 나의계정 접속 성공");
